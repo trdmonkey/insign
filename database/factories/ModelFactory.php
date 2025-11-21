@@ -34,3 +34,32 @@ $factory->define(App\Models\User::class, static function (Faker\Generator $faker
         
     ];
 });
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Categorium::class, static function (Faker\Generator $faker) {
+    return [
+        'nombre' => $faker->sentence,
+        'slug' => $faker->unique()->slug,
+        'descripcion' => $faker->text(),
+        'estado' => $faker->boolean(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Palabra::class, static function (Faker\Generator $faker) {
+    return [
+        'nombre' => $faker->sentence,
+        'slug' => $faker->unique()->slug,
+        'descripcion' => $faker->text(),
+        'estado' => $faker->boolean(),
+        'link' => $faker->text(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        'categoria_id' => $faker->sentence,
+        
+        
+    ];
+});

@@ -52,5 +52,42 @@ return [
         ],
     ],
 
+    'categorium' => [
+        'title' => 'Categorías',
+
+        'actions' => [
+            'index' => 'Listado de Categorías',
+            'create' => 'Nueva Categoría',
+            'edit' => 'Editar Categoría: :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'nombre' => 'Nombre',
+            'slug' => 'Slug',
+            'descripcion' => 'Descripción',
+            'estado' => 'Estado',
+        ],
+    ],
+
+    'palabra' => [
+        'title' => 'Palabra',
+
+        'actions' => [
+            'index' => 'Listado de Palabras',
+            'create' => 'Nueva Palabra',
+            'edit' => 'Editar Palabra: :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'nombre' => 'Nombre',
+            'slug' => 'Slug',
+            'descripcion' => 'Descripción',
+            'estado' => 'Estado',
+            'link' => 'Link',
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];
