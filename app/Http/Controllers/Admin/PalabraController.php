@@ -26,11 +26,26 @@ class PalabraController extends Controller
 
     public function index(IndexPalabra $request)
     {
-        $data = AdminListing::create(Palabra::class)->processRequestAndGet(
+        /* $data = AdminListing::create(Palabra::class)->processRequestAndGet(
             $request,
             ['id', 'nombre', 'estado', 'categoria_id'],
             ['id', 'nombre', 'slug', 'descripcion', 'link']
-        );
+        ); */
+
+        $data = AdminListing::create(Palabra::class)
+            ->modifyQuery(function($query) {
+                $query->leftJoin('categoria as c', 'palabra.categoria_id', '=', 'c.id')
+                    ->selectRaw("
+                    palabra.*, 
+                    c.nombre as categoria_nombre,
+                    CASE WHEN palabra.estado = 1 THEN 'Activo' ELSE 'Inactivo' END as estado_texto
+                ");
+            })
+            ->processRequestAndGet(
+                $request,
+                ['id', 'nombre', 'estado_texto', 'categoria_nombre'],
+                ['id', 'nombre', 'slug', 'descripcion', 'link']
+            );
 
         if ($request->ajax()) {
             if ($request->has('bulk')) {

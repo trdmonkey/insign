@@ -85,7 +85,9 @@ return [
             'slug' => 'Slug',
             'descripcion' => 'Descripción',
             'estado' => 'Estado',
+            'estado_texto' => 'Estado',
             'link' => 'Link',
+            'categoria_id' => 'Categoria',
         ],
     ],
 
