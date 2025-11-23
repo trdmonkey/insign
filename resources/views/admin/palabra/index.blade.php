@@ -51,6 +51,7 @@
 
                                         <th is='sortable' :column="'id'">{{ trans('admin.palabra.columns.id') }}</th>
                                         <th is='sortable' :column="'nombre'">{{ trans('admin.palabra.columns.nombre') }}</th>
+                                        <th is='sortable' :column="'slug'">{{ trans('admin.palabra.columns.slug') }}</th>
                                         <th is='sortable' :column="'estado'">{{ trans('admin.palabra.columns.estado') }}</th>
                                         <th is='sortable' :column="'categoria_id'">{{ trans('admin.palabra.columns.categoria_id') }}</th>
 
@@ -87,6 +88,9 @@
 
                                     <!-- Nombre -->
                                     <td>@{{ item.nombre }}</td>
+
+                                    <!-- Slug -->
+                                    <td>@{{ item.slug }}</td>
 
                                     <!-- Estado -->
                                     <td>
