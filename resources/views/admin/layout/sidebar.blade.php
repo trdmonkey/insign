@@ -1,4 +1,4 @@
-<div class="sidebar" style="background: #515C49; font-family: 'Poppins', sans-serif;">
+<div class="sidebar" style="background: #272727; font-family: 'Poppins', sans-serif;">
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.content') }}</li>
@@ -15,5 +15,5 @@
             {{--<li class="nav-item"><a class="nav-link" href="{{ url('admin/configuration') }}"><i class="nav-icon icon-settings"></i> {{ __('Configuration') }}</a></li>--}}
         </ul>
     </nav>
-    <button class="sidebar-minimizer brand-minimizer" style="background: #3A5230;" type="button"></button>
+    <button class="sidebar-minimizer brand-minimizer" style="background: #131313;" type="button"></button>
 </div>
