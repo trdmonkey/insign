@@ -75,15 +75,22 @@ class PalabraController extends Controller
 
         $palabra = Palabra::create($sanitized);
 
-        if ($request->ajax()) {
-            return [
-                'redirect' => url('admin/palabras'),
-                'message' => trans('brackets/admin-ui::admin.operation.succeeded')
-            ];
+        // LOG PARA SABER SI LARAVEL RECIBE ARCHIVOS
+        \Log::info('FILES RECIBIDOS:', [
+            'hasFile(video)' => $request->hasFile('video'),
+            'allFiles' => $request->allFiles()
+        ]);
+
+        // SI EL ARCHIVO LLEGA, SE GUARDA EN MEDIA
+        if ($request->hasFile('video')) {
+            $palabra->addMediaFromRequest('video')
+                ->toMediaCollection('video');
         }
 
-        return redirect('admin/palabras');
+        return redirect('admin/palabras')
+            ->with('success', 'Guardado correctamente');
     }
+
 
     public function show(Palabra $palabra)
     {

@@ -27,11 +27,16 @@ class StorePalabra extends FormRequest
     {
         return [
             'nombre' => ['required', 'string'],
-            'slug' => ['nullable', Rule::unique('palabra', 'slug'), 'string'],
+            'slug' => [
+                'nullable',
+                'string',
+                Rule::unique('palabra', 'slug')->ignore($this->palabra),
+            ],
             'descripcion' => ['nullable', 'string'],
-            'estado' => ['required', 'boolean'],
+            'estado' => ['required'],
             'link' => ['nullable', 'string'],
             'categoria_id' => ['required', 'string'],
+            'media.*' => ['nullable'],
             
         ];
     }
@@ -45,8 +50,10 @@ class StorePalabra extends FormRequest
     {
         $sanitized = $this->validated();
 
-        //Add your code for manipulation with request data here
+        // convertir "true" o "false" a 1 ó 0
+        $sanitized['estado'] = $this->has('estado') && $this->estado ? 1 : 0;
 
         return $sanitized;
     }
+
 }

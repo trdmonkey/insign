@@ -78,15 +78,15 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
-    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-        Route::prefix('palabras')->name('palabras/')->group(static function() {
-            Route::get('/',                                             'PalabraController@index')->name('index');
-            Route::get('/create',                                       'PalabraController@create')->name('create');
-            Route::post('/',                                            'PalabraController@store')->name('store');
-            Route::get('/{palabra}/edit',                               'PalabraController@edit')->name('edit');
-            Route::post('/bulk-destroy',                                'PalabraController@bulkDestroy')->name('bulk-destroy');
-            Route::post('/{palabra}',                                   'PalabraController@update')->name('update');
-            Route::delete('/{palabra}',                                 'PalabraController@destroy')->name('destroy');
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin.')->group(static function() {
+        Route::prefix('palabras')->name('palabras.')->group(static function() {
+            Route::get('/', 'PalabraController@index')->name('index');
+            Route::get('/create', 'PalabraController@create')->name('create');
+            Route::post('/', 'PalabraController@store')->name('store');
+            Route::get('/{palabra}/edit', 'PalabraController@edit')->name('edit');
+            Route::post('/bulk-destroy', 'PalabraController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{palabra}', 'PalabraController@update')->name('update');
+            Route::delete('/{palabra}', 'PalabraController@destroy')->name('destroy');
         });
     });
 });
