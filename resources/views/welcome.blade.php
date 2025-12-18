@@ -98,25 +98,85 @@
 
                 <div class="mt-16">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
+                        <svg viewBox="0 0 460 90" xmlns="http://www.w3.org/2000/svg"
+     class="h-12 w-auto" aria-label="InSign" role="img">
+  <title>InSign – Lenguaje de Señas</title>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
+  <defs>
+    <!-- Gradiente de marca -->
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="#7A00FF"/>
+    </linearGradient>
+  </defs>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
+  <!-- LOGOTIPO COMPLETO -->
+  <g transform="translate(10,58)">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+    <!-- I -->
+    <path d="M0 -36 V0"
+          stroke="#C2BBC9"
+          stroke-width="6"
+          stroke-linecap="round"
+          class="dark:stroke-white"/>
+
+    <!-- n -->
+    <path d="M18 0 V-18
+             C18 -30, 44 -30, 44 -18 V0"
+          fill="none"
+          stroke="#C2BBC9"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="dark:stroke-white"/>
+
+    <!-- GESTO DE SEÑA (reemplaza la S) -->
+    <!-- Representa dirección + movimiento -->
+    <path d="M70 -30
+             C98 -24, 120 -16, 96 0
+             C72 16, 56 -8, 74 -20"
+          fill="none"
+          stroke="url(#brand)"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- punto de referencia (posición de la seña) -->
+    <circle cx="96" cy="-14" r="3.5" fill="url(#brand)"/>
+
+    <!-- i -->
+    <path d="M122 0 V-20"
+          stroke="#C2BBC9"
+          stroke-width="6"
+          stroke-linecap="round"
+          class="dark:stroke-white"/>
+    <circle cx="122" cy="-30" r="3.5" fill="#111827" class="dark:fill-white"/>
+
+    <!-- g -->
+    <path d="M150 -10
+             C150 -30, 190 -30, 190 -10
+             C190 10, 150 10, 150 -10 Z
+             M190 -10 V18"
+          fill="none"
+          stroke="#C2BBC9"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="dark:stroke-white"/>
+
+    <!-- n -->
+    <path d="M215 0 V-18
+             C215 -30, 241 -30, 241 -18 V0"
+          fill="none"
+          stroke="#C2BBC9"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="dark:stroke-white"/>
+
+  </g>
+</svg>
+
 
                         <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div>
