@@ -1,0 +1,47 @@
+/* ===============================
+   ELIMINAR LOGO CRAFTABLE HEADER
+   =============================== */
+
+/* Header logo */
+header .navbar-brand,
+header .brand,
+header .logo,
+header svg {
+    display: none !important;
+}
+
+/* Sidebar logo Craftable */
+.sidebar .brand,
+.sidebar svg,
+.sidebar .navbar-brand {
+    display: none !important;
+}
+
+/* ===============================
+   LOGO INSIGN HEADER
+   =============================== */
+
+.insign-header-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.insign-header-logo img {
+    height: 36px;
+}
+
+/* ===============================
+   ELIMINAR TEXTO CRAFTABLE HEADER
+   =============================== */
+
+header .navbar-brand {
+    font-size: 0 !important;
+    background: url('/images/insign-logo.svg') no-repeat left center;
+    background-size: contain;
+    width: 140px;
+    height: 40px;
+}
+
+
+

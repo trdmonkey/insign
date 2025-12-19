@@ -27,3 +27,13 @@ if (token) {
 } else {
 	console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerBrand = document.querySelector(
+        'header .navbar:not(.sidebar) .navbar-brand'
+    );
+
+    if (headerBrand) {
+        headerBrand.remove();
+    }
+});

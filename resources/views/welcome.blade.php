@@ -99,83 +99,83 @@
                 <div class="mt-16">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         <svg viewBox="0 0 460 90" xmlns="http://www.w3.org/2000/svg"
-     class="h-12 w-auto" aria-label="InSign" role="img">
-  <title>InSign – Lenguaje de Señas</title>
+                            class="h-12 w-auto" aria-label="InSign" role="img">
+                            <title>InSign – Lenguaje de Señas</title>
 
-  <defs>
-    <!-- Gradiente de marca -->
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00C2FF"/>
-      <stop offset="100%" stop-color="#7A00FF"/>
-    </linearGradient>
-  </defs>
+                            <defs>
+                                <!-- Gradiente de marca -->
+                                <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#00C2FF"/>
+                                <stop offset="100%" stop-color="#7A00FF"/>
+                                </linearGradient>
+                            </defs>
 
-  <!-- LOGOTIPO COMPLETO -->
-  <g transform="translate(10,58)">
+                            <!-- LOGOTIPO COMPLETO -->
+                            <g transform="translate(10,58)">
 
-    <!-- I -->
-    <path d="M0 -36 V0"
-          stroke="#C2BBC9"
-          stroke-width="6"
-          stroke-linecap="round"
-          class="dark:stroke-white"/>
+                                <!-- I -->
+                                <path d="M0 -36 V0"
+                                    stroke="#C2BBC9"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    class="dark:stroke-white"/>
 
-    <!-- n -->
-    <path d="M18 0 V-18
-             C18 -30, 44 -30, 44 -18 V0"
-          fill="none"
-          stroke="#C2BBC9"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="dark:stroke-white"/>
+                                <!-- n -->
+                                <path d="M18 0 V-18
+                                        C18 -30, 44 -30, 44 -18 V0"
+                                    fill="none"
+                                    stroke="#C2BBC9"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="dark:stroke-white"/>
 
-    <!-- GESTO DE SEÑA (reemplaza la S) -->
-    <!-- Representa dirección + movimiento -->
-    <path d="M70 -30
-             C98 -24, 120 -16, 96 0
-             C72 16, 56 -8, 74 -20"
-          fill="none"
-          stroke="url(#brand)"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
+                                <!-- GESTO DE SEÑA (reemplaza la S) -->
+                                <!-- Representa dirección + movimiento -->
+                                <path d="M70 -30
+                                        C98 -44, 160 -16, 26 0
+                                        C72 16, 96 -8, 74 -20"
+                                    fill="none"
+                                    stroke="url(#brand)"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
 
-    <!-- punto de referencia (posición de la seña) -->
-    <circle cx="96" cy="-14" r="3.5" fill="url(#brand)"/>
+                                <!-- punto de referencia (posición de la seña) -->
+                                <circle cx="122" cy="-40" r="5.5" fill="url(#brand)"/>
 
-    <!-- i -->
-    <path d="M122 0 V-20"
-          stroke="#C2BBC9"
-          stroke-width="6"
-          stroke-linecap="round"
-          class="dark:stroke-white"/>
-    <circle cx="122" cy="-30" r="3.5" fill="#111827" class="dark:fill-white"/>
+                                <!-- i -->
+                                <path d="M122 0 V-20"
+                                    stroke="#C2BBC9"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    class="dark:stroke-white"/>
+                                <circle cx="122" cy="-30" r="3.5" fill="#111827" class="dark:fill-white"/>
 
-    <!-- g -->
-    <path d="M150 -10
-             C150 -30, 190 -30, 190 -10
-             C190 10, 150 10, 150 -10 Z
-             M190 -10 V18"
-          fill="none"
-          stroke="#C2BBC9"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="dark:stroke-white"/>
+                                <!-- g -->
+                                <path d="M150 -10
+                                        C150 -30, 190 -30, 190 -10
+                                        C190 10, 150 10, 150 -10 Z
+                                        M190 -10 V28"
+                                    fill="none"
+                                    stroke="#C2BBC9"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="dark:stroke-white"/>
 
-    <!-- n -->
-    <path d="M215 0 V-18
-             C215 -30, 241 -30, 241 -18 V0"
-          fill="none"
-          stroke="#C2BBC9"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="dark:stroke-white"/>
+                                <!-- n -->
+                                <path d="M215 0 V-18
+                                        C215 -30, 241 -30, 241 -18 V0"
+                                    fill="none"
+                                    stroke="#C2BBC9"
+                                    stroke-width="6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="dark:stroke-white"/>
 
-  </g>
-</svg>
+                            </g>
+                        </svg>
 
 
                         <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">

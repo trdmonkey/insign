@@ -28,3 +28,23 @@ Vue.use(VueCookie);
 new Vue({
     mixins: [Admin],
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header .navbar');
+    if (!header) return;
+
+    // evitar duplicados
+    if (document.querySelector('.insign-header-logo')) return;
+
+    const logo = document.createElement('div');
+    logo.className = 'insign-header-logo';
+    logo.innerHTML = `<img src="/images/insign-logo.svg" alt="InSign">`;
+
+    header.prepend(logo);
+});
+
+
+const footer = document.querySelector('footer');
+if (footer) {
+    footer.innerHTML = 'InSign © 2025 – Plataforma educativa';
+}
