@@ -22,13 +22,13 @@
         <!-- I -->
         <path d="M0 -36 V0"
             stroke="#564E69"
-            stroke-width="10"
+            stroke-width="6"
             stroke-linecap="round"
             class="dark:stroke-white"/>
 
         <!-- N -->
-        <path d="M18 15 V-18
-                C18 -30, 44 -30, 46 -18 V0"
+        <path d="M18 5 V-38
+                C48 -30, 44 -20, 46 -3 V0"
             fill="none"
             stroke="url(#brandy)"
             stroke-width="7"
@@ -40,7 +40,7 @@
         <path d="M118 -44 
                 C105 -32, 65 -35, 65 -22 
                 C65 -10, 105 -15, 105 -2 
-                C110 18, 35 52, 46 3"
+                C110 18, 35 52, 46 0"
             fill="none"
             stroke="url(#brand)"
             stroke-width="7"
