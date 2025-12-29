@@ -65,12 +65,13 @@
 
                             {{-- VIDEO --}}
                             @if ($palabra->media->first())
-                                <video class="card-img-top" controls>
+                                <video class="card-img-top" muted preload="metadata">
                                     <source
                                         src="{{ $palabra->media->first()->getUrl() }}"
                                         type="video/mp4"
                                     >
                                 </video>
+
                             @else
                                 <div class="bg-secondary text-white d-flex align-items-center justify-content-center"
                                      style="height:225px">
@@ -90,9 +91,18 @@
                                     </span>
                                 @endif
 
-                                <p class="card-text text-muted small mt-auto">
-                                    Publicado {{ $palabra->created_at->diffForHumans() }}
-                                </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+
+                                <a href="{{ url('palabra/'.$palabra->slug) }}"
+                                class="btn btn-sm btn-outline-primary">
+                                    Ver palabra
+                                </a>
+
+                                <small class="text-muted">
+                                    {{ $palabra->created_at->diffForHumans() }}
+                                </small>
+
+                            </div>
 
                             </div>
                         </div>

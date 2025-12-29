@@ -2,8 +2,12 @@
 
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\PalabraController;
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/palabra/{slug}', [PalabraController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
