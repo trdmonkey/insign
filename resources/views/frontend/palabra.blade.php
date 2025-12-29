@@ -62,27 +62,27 @@
         <div class="row justify-content-center mb-4">
             <div class="col-12 col-md-6">
 
-@php
-    $video = $palabra->getMedia('video')->first();
-@endphp
+                @php
+                    $video = $palabra->getMedia('video')->first();
+                @endphp
 
-@if ($video)
-    <div class="mb-4" style="max-width:420px;margin:auto">
-        <video
-            controls
-            playsinline
-            preload="metadata"
-            style="width:100%;border-radius:1rem;background:#000"
-        >
-            <source src="{{ $video->getUrl() }}" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-        </video>
-    </div>
-@else
-    <div class="alert alert-warning text-center">
-        No hay video disponible para esta palabra.
-    </div>
-@endif
+                @if ($video)
+                    <div class="mb-4" style="max-width:420px;margin:auto">
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            style="width:100%;border-radius:1rem;background:#000"
+                        >
+                            <source src="{{ $video->getUrl() }}" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                    </div>
+                @else
+                    <div class="alert alert-warning text-center">
+                        No hay video disponible para esta palabra.
+                    </div>
+                @endif
 
             </div>
         </div>
