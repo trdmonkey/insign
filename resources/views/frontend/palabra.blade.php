@@ -12,13 +12,9 @@
     {{-- Bootstrap icons --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <style>
-        video {
-            width: 100%;
-            background: #000;
-            border-radius: 1rem;
-        }
-    </style>
+    {{-- Custom styles --}}
+    <link rel="stylesheet" href="{{ asset('css/palabra.css') }}">
+
 </head>
 
 <body class="bg-body">
@@ -59,85 +55,74 @@
         </pre> -->
         
         {{-- VIDEO (PROTAGONISTA) --}}
-        <div class="row justify-content-center mb-4">
-            <div class="col-12 col-md-6">
+        <section class="video-hero">
+            @php
+                $video = $palabra->getMedia('video')->first();
+            @endphp
 
-                @php
-                    $video = $palabra->getMedia('video')->first();
-                @endphp
+            @if ($video)
+                <div class="video-wrapper">
 
-                @if ($video)
-                    <div class="mb-4" style="max-width:420px;margin:auto">
-                        <video
-                            controls
-                            playsinline
-                            preload="metadata"
-                            style="width:100%;border-radius:1rem;background:#000"
-                        >
-                            <source src="{{ $video->getUrl() }}" type="video/mp4">
-                            Tu navegador no soporta video HTML5.
-                        </video>
-                    </div>
-                @else
-                    <div class="alert alert-warning text-center">
-                        No hay video disponible para esta palabra.
-                    </div>
-                @endif
+                    {{-- CATEGORIA SOBRE EL VIDEO --}}
+                    @if ($palabra->categoria)
+                        <span class="video-badge">
+                            {{ $palabra->categoria->nombre }}
+                        </span>
+                    @endif
 
-            </div>
-        </div>
+                    {{-- VIDEO --}}
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+                        <source src="{{ $video->getUrl() }}" type="video/mp4">
+                    </video>
+
+                </div>
+            @endif
+        </section>
+
 
         {{-- INFO --}}
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
+        <section class="info-section">
+            <div class="info-card">
 
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4">
+                @if ($palabra->categoria)
+                    <span class="badge bg-primary mb-3">
+                        {{ $palabra->categoria->nombre }}
+                    </span>
+                @endif
 
-                        {{-- CATEGORIA --}}
-                        @if ($palabra->categoria)
-                            <span class="badge bg-primary mb-3">
-                                <i class="bi bi-tags"></i>
-                                {{ $palabra->categoria->nombre }}
-                            </span>
-                        @endif
+                <h1 class="mb-2">
+                    {{ $palabra->nombre }}
+                </h1>
 
-                        {{-- TITULO --}}
-                        <h1 class="fw-light mb-3">
-                            {{ $palabra->nombre }}
-                        </h1>
+                @if ($palabra->descripcion)
+                    <p class="text-body-secondary mb-4">
+                        {{ $palabra->descripcion }}
+                    </p>
+                @else
+                    <p class="text-body-secondary fst-italic mb-4">
+                        No hay descripción disponible para esta seña.
+                    </p>
+                @endif
 
-                        {{-- DESCRIPCION --}}
-                        @if ($palabra->descripcion)
-                            <p class="text-body-secondary">
-                                {{ $palabra->descripcion }}
-                            </p>
-                        @else
-                            <p class="text-body-secondary fst-italic">
-                                No hay descripción disponible para esta seña.
-                            </p>
-                        @endif
+                <hr>
 
-                        <hr>
-
-                        {{-- META --}}
-                        <div class="d-flex justify-content-between small text-body-secondary">
-                            <span>
-                                <i class="bi bi-calendar"></i>
-                                {{ $palabra->created_at->format('d/m/Y') }}
-                            </span>
-
-                            <span>
-                                <i class="bi bi-check-circle"></i>
-                                Activo
-                            </span>
-                        </div>
-
-                    </div>
+                <div class="d-flex justify-content-between small text-body-secondary">
+                    <span>
+                        <i class="bi bi-calendar"></i>
+                        {{ $palabra->created_at->format('d/m/Y') }}
+                    </span>
+                    <span>
+                        <i class="bi bi-check-circle"></i>
+                        Activo
+                    </span>
                 </div>
 
             </div>
-        </div>
+        </section>
 
     </div>
 
