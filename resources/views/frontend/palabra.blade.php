@@ -63,6 +63,8 @@
             @if ($video)
                 <div class="video-wrapper">
 
+                    <div class="video-frame"></div>
+
                     {{-- CATEGORIA SOBRE EL VIDEO --}}
                     @if ($palabra->categoria)
                         <span class="video-badge">
