@@ -39,7 +39,7 @@
             </button>
 
             <a href="/" class="btn btn-outline-light">
-                <i class="bi bi-arrow-left"></i>
+                <i class="bi bi-backspace"></i>
             </a>
 
         </div>
