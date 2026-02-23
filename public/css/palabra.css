@@ -32,6 +32,8 @@
 
     padding: 6px;
     background: transparent;
+
+    animation: framePulse 3.5s ease-in-out infinite;
 }
 
 
@@ -123,3 +125,18 @@
 }
 
 /* ============= =================== ========================= ================== =================== */
+
+@keyframes framePulse {
+    0% {
+        border-color: rgba(255,255,255,.25);
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+    50% {
+        border-color: rgba(255,255,255,.7);
+        box-shadow: 0 0 20px rgba(255,255,255,.35);
+    }
+    100% {
+        border-color: rgba(255,255,255,.25);
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+}
